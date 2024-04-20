@@ -8,6 +8,7 @@ import { MdEmail } from 'react-icons/md'
 import { FaLinkedin } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { FaSquareInstagram } from 'react-icons/fa6'
+
 const Sidebar = () => (
   <div className="nav-bar">
     <Link className="logo" to="/">
@@ -15,20 +16,20 @@ const Sidebar = () => (
       <img className="sub-logo" src={logos} alt="sema" />
     </Link>
     <nav>
-      <NavLink exact="true" activeclassname="active" to="/">
+      <NavLink exact={true} activeClassName="active" to="/">
         <IoHomeSharp color="#4d4d43" />
       </NavLink>
       <NavLink
-        exact="true"
-        activeclassname="active"
+        exact={true}
+        activeClassName="active"
         className="about-link"
         to="/"
       >
         <FaUser color="#4d4d43" />
       </NavLink>
       <NavLink
-        exact="true"
-        activeclassname="active"
+        exact={true}
+        activeClassName="active"
         className="contact-link"
         to="/contact"
       >
@@ -66,4 +67,5 @@ const Sidebar = () => (
     </ul>
   </div>
 )
+
 export default Sidebar

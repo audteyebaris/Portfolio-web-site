@@ -19,11 +19,11 @@ const About = () => {
           Kendime güveniyorum, doğal olarak meraklıyım ve sürekli olarak
           projelerimin üzerinde çalışıyorum web geliştirme becerilerimi sürekli
           olarak geliştiriyorum ve her bir sorunu çözerken kendimi daha iyi hale
-          getirmeye odaklanıyorum
+          getirmeye odaklanıyorum.
         </p>
         <p>
           Kendimi tek bir kelime ile tanımlamam gerekirse bu aile olurdu.
-          Ailemle vakit geçirmeyi cok seviyorum.Öğrenmeye meraklı zorluklar
+          Ailemle vakit geçirmeyi çok seviyorum.Öğrenmeye meraklı, zorluklar
           karşısında asla vazgeçmeyen bir yazılımcı ve anneyim...
         </p>
       </div>

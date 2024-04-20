@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import LogoTitle from '../../assets/images/logo-s.png'
 import { Link } from 'react-router-dom'
 import './index.scss'
@@ -6,7 +6,6 @@ import AnimatedLetters from '../AnimatedLetters'
 import Logo from './Logo'
 
 const Home = () => {
-  //harflerin animasyonu olayını state de Tuttuk
   const [letterClass, setLetterClass] = useState('text-animate')
 
   const nameArray = ['e', 'm', 'a']
@@ -27,11 +26,16 @@ const Home = () => {
     'r',
   ]
 
-  // useEffect(() => {
-  //   return setTimeout(() => {
-  //     setLetterClass('text-animate-hover')
-  //   }, 4000)
-  // }, [])
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setLetterClass('text-animate-hover')
+    }, 4000)
+
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }, [])
+
   return (
     <div className="container home-page">
       <div className="text-zone">
