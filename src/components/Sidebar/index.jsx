@@ -3,10 +3,8 @@ import LogoS from '../../assets/images/logo-s.png'
 import logos from '../../assets/images/logos.png'
 import './index.scss'
 import { IoHomeSharp } from 'react-icons/io5'
-import { FaUser } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import { FaLinkedin } from 'react-icons/fa'
-import { FaGithub } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaUser } from 'react-icons/fa'
 import { FaSquareInstagram } from 'react-icons/fa6'
 
 const Sidebar = () => (
@@ -16,14 +14,15 @@ const Sidebar = () => (
       <img className="sub-logo" src={logos} alt="sema" />
     </Link>
     <nav>
-      <NavLink exact={true} activeClassName="active" to="/">
+      <NavLink exact="true" to="/">
         <IoHomeSharp color="#4d4d43" />
       </NavLink>
+
       <NavLink
         exact={true}
         activeClassName="active"
         className="about-link"
-        to="/"
+        to="/about"
       >
         <FaUser color="#4d4d43" />
       </NavLink>

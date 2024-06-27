@@ -1,5 +1,6 @@
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
+
 const About = () => {
   return (
     <div className="container about-page">
@@ -7,13 +8,13 @@ const About = () => {
         <h1>
           <AnimatedLetters
             strArray={['H', 'A', 'K', 'K', 'I', 'M', 'D', 'A']}
-            idx={15}
+            idx={15} //1.5 saniyelik gecikme
           />
         </h1>
-        <p>
+        <p align="LEFT">
           Merhaba Ben HTML5, CSS3, Bootstrap, Tailwind, Sass, Javascript, React,
-          Redux, Redux-thunk, Redux-thunk-toolkit, Typscreet ile uygulamalar
-          geliştiren bir Web Developer'ım.
+          Redux, Redux-thunk, Redux-thunk-toolkit, Freebase, Typescript ile
+          uygulamalar geliştiren bir Web Developer'ım.
         </p>
         <p>
           Kendime güveniyorum, doğal olarak meraklıyım ve sürekli olarak

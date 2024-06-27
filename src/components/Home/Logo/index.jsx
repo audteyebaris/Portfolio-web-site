@@ -35,11 +35,12 @@ const Logo = () => {
       }
     )
   }, [])
-
+  console.log(bgRef)
   return (
     <div className="logo-container">
       <img ref={solidLogoRef} className="solid-logo" src={LogoS} alt="S" />
       <svg
+        ref={bgRef}
         width="559pt"
         height="897pt"
         version="1.0"
