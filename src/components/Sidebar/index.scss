@@ -1,11 +1,12 @@
 .nav-bar {
   background: #181818;
   width: 60px;
-  height: 100vh;
+  height: 105vh;
   position: absolute;
   top: -35px;
+  bottom: 0;
   z-index: 3;
-  min-height: 500px;
+  min-height: 100%;
 
   .logo {
     display: block;
@@ -23,6 +24,7 @@
       }
     }
   }
+
   nav {
     display: block;
     text-align: center;
@@ -44,15 +46,18 @@
       i {
         transition: all 0.3s ease-out;
       }
+
       &:hover {
         color: #ffd700;
         svg {
           opacity: 0;
         }
+
         &:after {
           opacity: 1;
         }
       }
+
       &:after {
         content: '';
         font-size: 9px;
@@ -63,35 +68,29 @@
         width: 100%;
         text-align: center;
         opacity: 0;
-        -webkit-transition: all 0.3s ease-out;
         transition: all 0.3s ease-out;
       }
-      &:first-child {
-        &:after {
-          content: 'HOME';
-        }
+
+      &:first-child:after {
+        content: 'HOME';
       }
-    }
-    a.about-link {
-      &:after {
+
+      &.about-link:after {
         content: 'ABOUT';
       }
-    }
 
-    a.contact-link {
-      &:after {
+      &.contact-link:after {
         content: 'CONTACT';
       }
-    }
-    a.portfolio-link {
-      &:after {
+
+      &.portfolio-link:after {
         content: 'PORTFOLIO';
       }
-    }
 
-    a.active {
-      svg {
-        color: #ffd700;
+      &.active {
+        svg {
+          color: #ffd700;
+        }
       }
     }
   }

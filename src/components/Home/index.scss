@@ -6,7 +6,40 @@
     transform: translateY(-50%);
     width: 40%;
     max-height: 90%;
+
+    @media (max-width: 1280px) {
+      width: 30%;
+      left: 5%;
+      margin-left: 10px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 30%;
+      left: 10%;
+      margin-left: 10px;
+    }
+
+    @media (max-width: 900px) {
+      width: 30%;
+      left: 10%;
+    }
+
+    @media (max-width: 768px) {
+      width: 30%;
+      left: 10%;
+      margin-left: 10px;
+    }
+
+    @media (max-width: 480px) {
+      position: relative;
+      left: 20%;
+      top: 0;
+      transform: none;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
+
   h1 {
     color: #fff;
     font-size: 56px;
@@ -25,6 +58,7 @@
       left: -15px;
       opacity: 0.6;
     }
+
     &:after {
       content: '<h1/>';
       font-family: 'La Belle Aurore', cursive;
@@ -36,6 +70,7 @@
       animation: fadeIn 1s 1.7s backwards;
       opacity: 0.6;
     }
+
     img {
       margin-left: 20px;
       opacity: 0;
@@ -44,7 +79,28 @@
       animation: rotateIn 1s linear both;
       animation-delay: 1.4s;
     }
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+      line-height: 40px;
+
+      &:before,
+      &:after {
+        font-size: 14px;
+        margin-top: -30px;
+      }
+
+      img {
+        width: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      font-size: 30px;
+      line-height: 30px;
+    }
   }
+
   h2 {
     color: #8d8d8d;
     margin-top: 20px;
@@ -53,7 +109,18 @@
     font-family: sans-serif;
     letter-spacing: 3px;
     animation: fadeIn 1s 1.8s backwards;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
   }
+
   .flat-button {
     color: #ffd700;
     font-size: 13px;
@@ -71,6 +138,18 @@
     &:hover {
       background: #ffd700;
       color: #333;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      padding: 8px 16px;
+      letter-spacing: 3px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 11px;
+      padding: 6px 14px;
+      letter-spacing: 2px;
     }
   }
 }
