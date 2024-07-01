@@ -1,14 +1,15 @@
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import { useEffect, useState } from 'react'
-import React, { useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import React from 'react'
 import emailjs from '@emailjs/browser'
-import { Form } from 'react-router-dom'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const refForm = useRef()
+
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover')
@@ -18,6 +19,7 @@ const Contact = () => {
       clearTimeout(timeoutId)
     }
   }, [])
+
   const sendEmail = (e) => {
     e.preventDefault()
     emailjs
@@ -37,6 +39,7 @@ const Contact = () => {
         }
       )
   }
+
   return (
     <>
       <div className="container contact-page">
@@ -64,7 +67,7 @@ const Contact = () => {
           </h1>
           <p>Web alanındaki her türlü proje ve işbirliğine açığım.</p>
           <div className="contact-form">
-            <form ref={Form} onSubmit={sendEmail}>
+            <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
                   <input placeholder="İsim" type="text" name="name" required />
@@ -105,12 +108,27 @@ const Contact = () => {
           Turkey
           <br />
           Ulukapı mahallesi 154261 sok. Kandemir sitesi <br />
-          Seydişehir /Konya <br />
+          Seydişehir / Konya <br />
           <br />
           <span>semademir0505@gmail.com</span>
         </div>
+        <div className="map-wrap">
+          <MapContainer
+            className="leaflet-container"
+            center={[37.41620505306633, 31.851421459804296]}
+            zoom={13}
+            scrollWheelZoom={false}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[37.41620505306633, 31.851421459804296]}>
+              <Popup>Ziyaretime gelirseniz sevinirim</Popup>
+            </Marker>
+          </MapContainer>
+        </div>
       </div>
-
       <Loader type="pacman" />
     </>
   )
